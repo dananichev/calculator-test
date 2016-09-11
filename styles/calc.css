@@ -1,0 +1,73 @@
+/* usually i prefer to use normalize.css but for the purposes of this task i will avoid using it */
+
+html,
+body {
+    font-size: 24px;
+}
+
+input,
+button {
+    padding: 5px;
+    background: #666;
+    border: 1px solid #666;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.calculator-wrapper {
+    margin: 0 auto;
+    width: 300px;
+    height: 295px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.calculator-number,
+.calculator-operation,
+.calculator-helper {
+    display: inline-block;
+}
+
+.calculator-handle {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.calculator-header {
+    padding: 10px 5px;
+    overflow: hidden;
+}
+
+.calculator-handle {
+    width: 23%;
+}
+
+.calculator-clear {
+    background: darkred;
+    border-color: darkred;
+}
+
+.calculator-workarea {
+    width: 277px;
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.calculator-grid {
+    padding: 5px 0 0 5px;
+}
+
+.calculator-result {
+    background: #2da8de;
+    border-color: #2da8de;
+}
+
+.calculator-handle sup {
+    font-size: 12px;
+}
+
+.calculator-handle-narrow {
+    width: 48%;
+}

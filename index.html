@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator Demo</title>
+    <link type="text/css" rel="stylesheet" href="styles/calc.css" />
+</head>
+<body>
+<div class="calculator-wrapper">
+    <div class="calculator-header">
+        <input autofocus type="text" class="calculator-workarea" tabindex="1" />
+    </div>
+    <div class="calculator-grid">
+        <button
+            data-operation="clear"
+            class="calculator-clear calculator-handle"
+            tabindex="0"
+        >
+            C
+        </button>
+        <button
+            data-operation="pow(2)"
+            class="calculator-handle"
+            tabindex="16"
+        >
+            x<sup>2</sup>
+        </button>
+        <button
+            data-operation="pow"
+            class="calculator-handle"
+            tabindex="17"
+        >
+            x<sup>n</sup>
+        </button>
+        <button
+            data-operation="add"
+            class="calculator-handle"
+            tabindex="12"
+        >
+            +
+        </button>
+
+        <button class="calculator-handle" tabindex="4">7</button>
+        <button class="calculator-handle" tabindex="3">8</button>
+        <button class="calculator-handle" tabindex="2">9</button>
+
+        <button
+            data-operation="subtract"
+            class="calculator-handle"
+            tabindex="13"
+        >
+            -
+        </button>
+
+        <button class="calculator-handle" tabindex="7">4</button>
+        <button class="calculator-handle" tabindex="6">5</button>
+        <button class="calculator-handle" tabindex="5">6</button>
+
+        <button
+            data-operation="multiply"
+            class="calculator-handle"
+            tabindex="15"
+        >
+            *
+        </button>
+
+        <button class="calculator-handle" tabindex="10">1</button>
+        <button class="calculator-handle" tabindex="9">2</button>
+        <button class="calculator-handle" tabindex="8">3</button>
+
+        <button
+            data-operation="divide"
+            class="calculator-handle"
+            tabindex="16"
+        >
+            /
+        </button>
+
+        <button class="calculator-handle calculator-handle-narrow" tabindex="11">0</button>
+
+        <button
+            data-operation="result"
+            class="calculator-result calculator-handle-narrow calculator-handle"
+            tabindex="18"
+        >
+            =
+        </button>
+
+    </div>
+</div>
+<script src="scripts/lib/engine.js"></script>
+<script src="scripts/calc/calc.js"></script>
+<script src="scripts/calc/operations/add.js"></script>
+<script src="scripts/calc/operations/clear.js"></script>
+<script src="scripts/calc/operations/divide.js"></script>
+<script src="scripts/calc/operations/multiply.js"></script>
+<script src="scripts/calc/operations/pow.js"></script>
+<script src="scripts/calc/operations/result.js"></script>
+<script src="scripts/calc/operations/subtract.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
