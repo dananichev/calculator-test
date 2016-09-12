@@ -8,7 +8,6 @@ Create a calculator app without using any third-party libraries. The calculator 
 Due to implementation of JS engine (according to IEEE 754) there are some issues related to rounding of math operations and float numbers.
 Current version of calculator does not support big numbers and edge cases (such as 0.1 + 0.2). 
 Both of this issues can be handled.
-If needed, it can be improved.
 
 Due to ``Object.assign()`` usage it wont work in, at least, IE12-.
 Due to ``KeyboardEvent.key`` usage it wont work in, at least, current Safari version.
