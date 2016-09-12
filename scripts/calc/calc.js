@@ -118,6 +118,7 @@
             handleOperation(key);
           }
   
+          // to restart the animation it's needed to remove class and start timeout
           self.handlers[key].removeClass('active');
           setTimeout(function() {
             self.handlers[key].addClass('active');
