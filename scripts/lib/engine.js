@@ -184,15 +184,10 @@ if (!('find' in NodeList.prototype)) {
 if (!('each' in NodeList.prototype)) {
   NodeList.prototype.each = function each(callback) {
     var i = 0;
-    for (var item in this) {
-      if (this.hasOwnProperty(item)) {
-        if (callback(item, i) === false) {
-          break;
-        }
-  
-        i++;
-      }
-    }
+    [].forEach.call(this, function(item) {
+      callback(item, i);
+      i++;
+    });
   };
 }
 

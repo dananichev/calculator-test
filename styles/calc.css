@@ -8,19 +8,33 @@ body {
 input,
 button {
     padding: 5px;
-    background: #666;
-    border: 1px solid #666;
-    border-radius: 2px;
-    color: #fff;
+    background: none;
+    border: none;
+    border-left: 1px solid #a1a1a1;
+    border-top: 1px solid #a1a1a1;
+    color: #000;
     display: inline-block;
     font-size: 24px;
 }
 
+div,
+input,
+button {
+    box-sizing: border-box;
+}
+
+button:active {
+    background: #C9C9C9;
+}
+
+.active {
+    animation: buttonActive 0.2s;
+}
+
 .calculator-wrapper {
-    margin: 0 auto;
-    width: 300px;
-    height: 295px;
-    background: rgba(0, 0, 0, 0.1);
+    margin: 40px auto 0;
+    width: 320px;
+    background: rgba(146, 146, 146, 0.3);
 }
 
 .calculator-number,
@@ -30,38 +44,70 @@ button {
 }
 
 .calculator-handle {
+    float: left;
     cursor: pointer;
-    margin-bottom: 5px;
+    height: 60px;
+}
+
+.calculator-handle:nth-child(4n) {
+    margin-right: 0;
+    border-right: 1px solid #a1a1a1;
+}
+
+.calculator-handle:nth-child(n + 16) {
+    margin-right: 0;
+    border-bottom: 1px solid #a1a1a1;
 }
 
 .calculator-header {
-    padding: 10px 5px;
+    padding: 10px;
     overflow: hidden;
 }
 
 .calculator-handle {
-    width: 23%;
+    width: 25%;
 }
 
 .calculator-clear {
-    background: darkred;
-    border-color: darkred;
+    background: rgba(222, 43, 39, 0.9);
+    color: #fff;
+}
+
+.calculator-clear:active {
+    background: rgb(208, 40, 37);
+}
+
+.calculator-clear.active {
+    animation: buttonClearActive 0.2s;
 }
 
 .calculator-workarea {
-    width: 277px;
+    width: 100%;
+    height: 50px;
     background: #fff;
     color: #000;
     border-color: #fff;
+    margin-right: 0;
 }
 
 .calculator-grid {
-    padding: 5px 0 0 5px;
+    padding: 5px 10px 10px 10px;
+    overflow: hidden;
 }
 
 .calculator-result {
     background: #2da8de;
     border-color: #2da8de;
+    margin-right: 0;
+    color: #fff;
+}
+
+.calculator-result:active {
+    background: #2B87B6;
+}
+
+.calculator-result.active {
+    animation: buttonResultActive 0.2s;
 }
 
 .calculator-handle sup {
@@ -69,5 +115,23 @@ button {
 }
 
 .calculator-handle-narrow {
-    width: 48%;
+    width: 50%;
+}
+
+@keyframes buttonActive {
+    0%   {background-color: transparent;}
+    50%  {background-color: #C9C9C9;}
+    100% {background-color: transparent;}
+}
+
+@keyframes buttonClearActive {
+    0%   {background-color: rgba(222, 43, 39, 0.9);}
+    50%  {background-color: rgb(208, 40, 37);}
+    100% {background-color: rgba(222, 43, 39, 0.9);}
+}
+
+@keyframes buttonResultActive {
+    0%   {background-color: #2da8de;}
+    50%  {background-color: #2B87B6;}
+    100% {background-color: #2da8de;}
 }

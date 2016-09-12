@@ -1,13 +1,19 @@
 "use strict";
 
+/**
+ * @this Calc
+ * @return {number}
+ */
 function result() {
-  var calcResult = this.state.value;
-  if (this.curOperation) {
-    calcResult = this.curOperation(calcResult);
-    this.curOperation = null;
+  var calcResult = parseFloat(this.state.value);
+  if (this.operation) {
+    calcResult = this.operation(calcResult);
+    this.operation = null;
   }
   
   return calcResult;
 }
 
 calculator.registerOperation('result', result);
+calculator.registerOperation('=', result);
+calculator.registerOperation('Enter', result);

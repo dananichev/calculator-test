@@ -5,3 +5,4 @@ function clear() {
 }
 
 calculator.registerOperation('clear', clear);
+calculator.registerOperation('Backspace', clear);
