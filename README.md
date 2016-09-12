@@ -1,5 +1,5 @@
 # Basic Calculator
-It's just a test task an nothing more.
+It's just a test task and nothing more.
 
 ## Requirements
 Create a calculator app without using any third-party libraries. The calculator should be capable of performing addition, subtraction, multiplication, division and exponentiation. It should be usable via mouse and keyboard. Explain on which aspects (choose three) you intend to focus on (e.g. design, maintainability, etc.) and briefly explain why you chose each.
