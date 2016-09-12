@@ -16,6 +16,3 @@ Due to ``KeyboardEvent.key`` usage it wont work in, at least, current Safari ver
 Both of this issues can be resolved if needed. 
 
 Basic pluggable system implemented to support extending of operations supported by calculator (check ``registerOperation`` method in ``calc.js`` + any existing operation for examples).
-
-## PS.
-There are no jQuery usage. 
