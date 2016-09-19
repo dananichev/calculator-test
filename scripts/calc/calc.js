@@ -61,7 +61,18 @@
      * @param {string} operation - id of operation
      */
     function handleOperation(operation) {
-      var result = operations[operation].call(self, parseFloat(self.state.value));
+      var result;
+      
+      // in case user input === another operation we should finish previous operation first
+      if (self.operation) {
+        result = self.operation(parseFloat(self.state.value));
+        self.operation = null;
+        reset();
+        updateValue(result);
+      }
+  
+      result = operations[operation].call(self, parseFloat(self.state.value));
+      
       if (typeof result !== 'function') {
         reset();
         updateValue(result);
@@ -124,10 +135,11 @@
             self.handlers[key].addClass('active');
           }, 10);
         }
-  
-        if (key === '.') {
-          handleValue(key);
-        } else if (allowedKeys.indexOf(parseInt(key, 10)) >= 0) {
+        
+        if (
+          key === '.'
+          || allowedKeys.indexOf(parseInt(key, 10)) >= 0
+        ) {
           handleValue(key);
         }
       });
