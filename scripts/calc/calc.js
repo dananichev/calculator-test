@@ -15,7 +15,9 @@
   
   /**
    * Calc
-   * @param {HTMLElement} element - calculator wrapper (should contain calculator-handles and calculator-workarea elements)
+   * @param {HTMLElement} element - calculator wrapper
+   *                                (should contain calculator-handles
+   *                                 and calculator-workarea elements)
    * @constructor
    * @return {Calc}
    */
@@ -62,7 +64,7 @@
     function handleOperation(operation) {
       var result;
       
-      // in case user input is another operation we should finish previous operation first
+      // in case there are unfinished previous operation we should finish it first
       if (self.operation) {
         result = self.operation(parseFloat(self.state.value));
         self.operation = null;
@@ -132,7 +134,7 @@
           self.handlers[key].removeClass('active');
           setTimeout(function() {
             self.handlers[key].addClass('active');
-          }, 10);
+          }, 50);
         }
         
         if (
