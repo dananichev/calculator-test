@@ -57,13 +57,13 @@
     }
   
     /**
-     * handles user operation
+     * handles user operation, called then user invokes operation
      * @param {string} operation - id of operation
      */
     function handleOperation(operation) {
       var result;
       
-      // in case user input === another operation we should finish previous operation first
+      // in case user input is another operation we should finish previous operation first
       if (self.operation) {
         result = self.operation(parseFloat(self.state.value));
         self.operation = null;
@@ -82,7 +82,7 @@
     }
   
     /**
-     * handles value change
+     * handles value change, called then user changes value directly
      * @param {number|string} value
      */
     function handleValue(value) {

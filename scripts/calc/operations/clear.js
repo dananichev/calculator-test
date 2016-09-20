@@ -1,8 +1,10 @@
 "use strict";
 
-function clear() {
-  return 0;
-}
-
-calculator.registerOperation('clear', clear);
-calculator.registerOperation('Backspace', clear);
+(function(context) {
+  function clear() {
+    return 0;
+  }
+  
+  context.calculator.registerOperation('clear', clear);
+  context.calculator.registerOperation('Backspace', clear);
+})(window);

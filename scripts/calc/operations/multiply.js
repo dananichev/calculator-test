@@ -1,16 +1,18 @@
 "use strict";
 
-/**
- * @this Calc
- * @param {number} x
- * @return {Function}
- */
-function multiply(x) {
-  this.needsUpdate = true;
-  return function(y) {
-    return x * y;
+(function(context) {
+  /**
+   * @this Calc
+   * @param {number} x
+   * @return {Function}
+   */
+  function multiply(x) {
+    this.needsUpdate = true;
+    return function(y) {
+      return x * y;
+    }
   }
-}
-
-calculator.registerOperation('multiply', multiply);
-calculator.registerOperation('*', multiply);
+  
+  context.calculator.registerOperation('multiply', multiply);
+  context.calculator.registerOperation('*', multiply);
+})(window);
